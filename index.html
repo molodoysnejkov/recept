@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RecipeBook</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-content">
+
+        <a href="#" class="logo">RecipeBook</a>
+
+        <nav>
+            <a href="#recipes">Рецепты</a>
+            <a href="#categories">Категории</a>
+            <button id="randomBtn" class="random-btn">
+                Случайный рецепт
+            </button>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <section class="hero">
+        <div class="container">
+
+            <p class="small-title">КОЛЛЕКЦИЯ РЕЦЕПТОВ</p>
+
+            <h1>
+                Что приготовим<br>
+                сегодня?
+            </h1>
+
+            <p class="hero-text">
+                Найди рецепт по названию или выбери категорию.
+            </p>
+
+            <div class="search">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Например: pasta, chicken, pizza..."
+                >
+
+                <button id="searchBtn">
+                    Найти
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="categories" class="categories-section">
+
+        <div class="container">
+
+            <div class="section-top">
+                <h2>Категории</h2>
+            </div>
+
+            <div id="categoriesList" class="categories">
+                <button class="category active" data-category="all">
+                    Все
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="recipes" class="recipes-section">
+
+        <div class="container">
+
+            <div class="section-top">
+                <div>
+                    <p class="small-title">RECIPE COLLECTION</p>
+                    <h2>Рецепты</h2>
+                </div>
+
+                <span id="recipeCount"></span>
+            </div>
+
+            <div id="recipesGrid" class="recipes-grid">
+
+                <div class="loading">
+                    Загружаем рецепты...
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div id="recipeModal" class="modal">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close">
+            ×
+        </button>
+
+        <img id="modalImage" src="" alt="">
+
+        <div class="modal-info">
+
+            <p id="modalCategory" class="modal-category"></p>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalArea" class="area"></p>
+
+            <h3>Ингредиенты</h3>
+
+            <ul id="ingredients"></ul>
+
+            <h3>Приготовление</h3>
+
+            <p id="instructions" class="instructions"></p>
+
+            <a
+                id="youtubeLink"
+                href="#"
+                target="_blank"
+                class="youtube"
+            >
+                Смотреть видео
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <div class="container footer-content">
+
+        <p>RecipeBook</p>
+
+        <span>
+            Рецепты загружаются через TheMealDB API
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
