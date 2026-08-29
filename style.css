@@ -6,14 +6,17 @@
 }
 
 :root {
-    --primary-color: #ff6b6b;
-    --secondary-color: #4ecdc4;
-    --text-dark: #2d3436;
-    --text-light: #636e72;
-    --bg-light: #f8f9fa;
-    --border-color: #e9ecef;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --primary-color: #2e7d32;
+    --primary-dark: #1b5e20;
+    --secondary-color: #66bb6a;
+    --secondary-dark: #43a047;
+    --text-dark: #1f2d1f;
+    --text-light: #526552;
+    --bg-light: #f0f7f1;
+    --bg-soft: #e8f5e9;
+    --border-color: #d7e8d9;
+    --shadow: 0 2px 8px rgba(19, 76, 32, 0.12);
+    --shadow-hover: 0 8px 18px rgba(19, 76, 32, 0.18);
 }
 
 body {
@@ -84,21 +87,21 @@ nav a:hover {
     color: white;
     border: none;
     padding: 0.7rem 1.5rem;
-    border-radius: 25px;
+    border-radius: 0;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .random-btn:hover {
-    background-color: #ff5252;
+    background-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2e7d32 0%, #81c784 100%);
     color: white;
     padding: 4rem 0;
     text-align: center;
@@ -136,8 +139,8 @@ nav a:hover {
 
 #searchInput {
     padding: 0.9rem 1.5rem;
-    border: none;
-    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
     width: 100%;
     max-width: 400px;
     font-size: 1rem;
@@ -145,7 +148,7 @@ nav a:hover {
 }
 
 #searchInput::placeholder {
-    color: #bdc3c7;
+    color: #9aa79b;
 }
 
 #searchBtn {
@@ -153,7 +156,7 @@ nav a:hover {
     background-color: var(--secondary-color);
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 0;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -161,7 +164,7 @@ nav a:hover {
 }
 
 #searchBtn:hover {
-    background-color: #3ab5a8;
+    background-color: var(--secondary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
 }
@@ -194,7 +197,7 @@ nav a:hover {
     background-color: var(--primary-color);
     color: white;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 0;
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -210,7 +213,7 @@ nav a:hover {
     padding: 0.7rem 1.5rem;
     background-color: white;
     border: 2px solid var(--border-color);
-    border-radius: 25px;
+    border-radius: 0;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -237,7 +240,7 @@ nav a:hover {
 
 .recipe-card {
     background: white;
-    border-radius: 12px;
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
@@ -254,6 +257,7 @@ nav a:hover {
     height: 200px;
     object-fit: cover;
     background-color: var(--bg-light);
+    border-radius: 0;
 }
 
 .recipe-info {
@@ -304,24 +308,24 @@ nav a:hover {
     font-size: 0.85rem;
     font-weight: 600;
     padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    border-radius: 0;
     background-color: var(--bg-light);
     color: var(--text-dark);
 }
 
 .recipe-difficulty.easy {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #dcedce;
+    color: #1b5e20;
 }
 
 .recipe-difficulty.medium {
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: #e8f5e9;
+    color: #2e7d32;
 }
 
 .recipe-difficulty.hard {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #edf6ed;
+    color: #1b5e20;
 }
 
 /* ===== LOADING STATE ===== */
